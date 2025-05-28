@@ -27,13 +27,4 @@ public class ForsideController
         }
     }
 
-    /*
-    @GetMapping("/foretUdviklForside")
-    public String foretUdviklForside()
-    {
-        return "foretUdviklForside";
-    }
-
-     */
-
 }

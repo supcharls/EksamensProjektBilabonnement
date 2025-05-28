@@ -1,6 +1,5 @@
 package org.example.eksamensprojektbilabonnement.Controller;
 
-import org.example.eksamensprojektbilabonnement.Repository.LoginRepo;
 import org.example.eksamensprojektbilabonnement.Service.LoginService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

@@ -2,45 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Bil redigering</title>
+    <link rel="stylesheet" th:href="@{/Styler.css}">
 </head>
 <body>
+    <ul class="logout" th:if="${session.loggedIn}">
+        <li><a th:href="@{/logout}">Log ud</a></li>
+    </ul>
 
-<ul class="logout" th:if="${session.loggedIn}">
-    <li><a th:href="@{/logout}">Log ud</a></li>
-</ul>
+    <div class="container">
+        <h1 class="title">Rediger Bil</h1>
 
-<h1>Rediger Bil</h1>
+        <form th:action="@{/bil/update}" th:object="${bil}" method="post">
+            <input type="hidden" th:field="*{bilId}">
 
-<form th:action="@{/bil/update}" th:object="${bil}" method="post">
-    <input type="hidden" th:field="*{bilId}">
+            <label>Brand:</label>
+            <input type="text" th:field="*{brand}" /><br><br>
 
-    <label>Brand:</label>
-    <input type="text" th:field="*{brand}" /><br><br>
+            <label>Model:</label>
+            <input type="text" th:field="*{model}" /><br><br>
 
-    <label>Model:</label>
-    <input type="text" th:field="*{model}" /><br><br>
+            <label>Nummer Plade:</label>
+            <input type="date" th:field="*{nummerPlade}" /><br><br>
 
-    <label>Nummer Plade:</label>
-    <input type="date" th:field="*{nummerPlade}" /><br><br>
+            <label>Stel Nummer:</label>
+            <input type="email" th:field="*{stelNummer}" /><br><br>
 
-    <label>Stel Nummer:</label>
-    <input type="email" th:field="*{stelNummer}" /><br><br>
+            <label>Pris:</label>
+            <input type="text" th:field="*{pris}" /><br><br>
 
-    <label>Pris:</label>
-    <input type="text" th:field="*{pris}" /><br><br>
+            <label>Produktion År:</label>
+            <input type="text" th:field="*{produktionAar}" /><br><br>
 
-    <label>Produktion År:</label>
-    <input type="text" th:field="*{produktionAar}" /><br><br>
+            <label>Brændstof Type:</label>
+            <input type="text" th:field="*{braendstoftype}" /><br><br>
 
-    <label>Brændstof Type:</label>
-    <input type="text" th:field="*{braendstoftype}" /><br><br>
+            <label>Bil Status:</label>
+            <input type="text" th:field="*{bilStatus}" /><br><br>
 
-    <label>Bil Status:</label>
-    <input type="text" th:field="*{bilStatus}" /><br><br>
-
-    <button type="submit">Gem Bil</button>
-</form>
+            <button type="submit">Gem Bil</button>
+        </form>
+    </div>
 
 </body>
 </html>

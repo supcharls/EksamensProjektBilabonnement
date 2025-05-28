@@ -1,8 +1,6 @@
 package org.example.eksamensprojektbilabonnement.Controller;
 
-import jakarta.servlet.http.HttpSession;
 import org.example.eksamensprojektbilabonnement.Model.Bil;
-import org.example.eksamensprojektbilabonnement.Model.Kunder;
 import org.example.eksamensprojektbilabonnement.Repository.BilRepo;
 import org.example.eksamensprojektbilabonnement.Service.BilService;
 import org.springframework.beans.factory.annotation.Autowired;

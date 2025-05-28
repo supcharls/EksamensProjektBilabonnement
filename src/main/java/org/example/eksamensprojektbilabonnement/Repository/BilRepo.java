@@ -6,7 +6,6 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
 
@@ -86,23 +85,3 @@ public class BilRepo
     }
 
 }
-
-
-
-
-
-
-/*
-    private final JdbcTemplate jdbcTemplate;
-
-    public BilRepo(JdbcTemplate jdbcTemplate) {
-        this.jdbcTemplate = jdbcTemplate;
-    }
-
-    public List<Bil> findBiler() {
-        String sql = "SELECT * FROM bil";
-        LinkedList<Bil> biler = new LinkedList<>();
-        biler.addAll(jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(Bil.class)));
-        return biler;
-    }
-}*/

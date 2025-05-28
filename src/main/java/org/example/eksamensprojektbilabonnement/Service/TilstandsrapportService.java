@@ -1,12 +1,10 @@
 package org.example.eksamensprojektbilabonnement.Service;
 
 
-import org.example.eksamensprojektbilabonnement.Model.Kunder;
 import org.example.eksamensprojektbilabonnement.Model.TilstandsRapport;
 import org.example.eksamensprojektbilabonnement.Repository.TilstandsrapportRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.example.eksamensprojektbilabonnement.Repository.FejlRepo;
 
 import java.util.List;
 
@@ -59,43 +57,3 @@ public class TilstandsrapportService
      */
 
 }
-
-
-
-
-
-
-
-    /*
-    private final TilstandsrapportRepo repository;
-
-    @Autowired
-    public TilstandsrapportService(TilstandsrapportRepo repository)
-    {
-        this.repository = repository;
-    }
-
-    public List<TilstandsRapport> findAll()
-    {
-        return repository.findAll();
-    }
-
-
-    public void save(TilstandsRapport rapport)
-    {
-        repository.save(rapport);
-    }
-
-
-    public TilstandsRapport findById(Long id)
-    {
-        return repository.findById(id).orElse(null);
-    }
-
-    public void deleteById(Long id)
-    {
-        repository.deleteById(id);
-    }
-
-}
-*/

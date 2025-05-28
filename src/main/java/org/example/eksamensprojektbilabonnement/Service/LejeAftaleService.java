@@ -10,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -121,36 +120,3 @@ public class LejeAftaleService
                 .reduce(BigDecimal.ZERO, BigDecimal::add);
     }
 }
-
-
-
-
-/*
-// controlleren kan foretage listevisning
-public List<LejeAftale> hentAlleLejeaftaler()
-{
-    return lejeAftaleRepo.hentAlleLejeaftaler();
-}
-*/
-
-
-
-
-
-    /*
-{
-    @Autowired
-    private LejeAftaleRepo lejeAftaleRepo;
-
-    public LejeAftale createLejeAftale(Kunder kunder, Bil bil, LocalDate startDato, LocalDate slutDato){
-        LejeAftale leje = new LejeAftale();
-        leje.setBil(bil);
-        leje.setStartDato(startDato);
-        leje.setSlutDato(slutDato);
-
-        return lejeAftaleRepo.save(leje);
-    }
-
-
-}
-*/
