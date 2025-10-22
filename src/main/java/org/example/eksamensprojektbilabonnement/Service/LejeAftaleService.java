@@ -46,6 +46,7 @@ public class LejeAftaleService
         bilRepo.opdaterBil(bil);
     }
 
+    //
     public Map<Long, LejeAftale> hentLejeaftaler()
     {
         List<LejeAftale> lejeaftaler = lejeAftaleRepo.hentAlleLejeaftaler();

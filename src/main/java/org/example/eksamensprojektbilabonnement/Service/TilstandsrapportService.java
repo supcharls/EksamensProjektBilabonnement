@@ -48,12 +48,4 @@ public class TilstandsrapportService
         tilstandsrapportRepo.sletTilstandsrapport(id);
     }
 
-    /*
-    // udregner priser på alle fejlende
-    public long samletPrisForSkaderne() {
-
-    }
-
-     */
-
 }

@@ -33,7 +33,7 @@ public class ForretningUdviklerController {
 
         model.addAttribute("antalBiler", bilService.getAntalBiler());
         model.addAttribute("samletPris", bilService.getSamletPris());
-        model.addAttribute("samletBilerLejetUd", lejeAftaleService.getAntalLejetBiler()); //
+        model.addAttribute("samletBilerLejetUd", lejeAftaleService.getAntalLejetBiler());
         model.addAttribute("samletPrisForUdlejetBiler", lejeAftaleService.getSamletPrisForUdlejetBiler());
 
         return "foretUdviklForside";

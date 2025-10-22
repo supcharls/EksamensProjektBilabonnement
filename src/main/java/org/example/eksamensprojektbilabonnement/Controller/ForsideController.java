@@ -13,7 +13,7 @@ public class ForsideController
         if (loggedIn != null && loggedIn) {
             return "skadeForside"; //logged in
         } else {
-            return "redirect:/login"; // ikki godtaget
+            return "redirect:/login"; // ikke godtaget
         }
     }
 

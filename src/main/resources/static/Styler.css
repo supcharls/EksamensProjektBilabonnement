@@ -38,7 +38,7 @@ body {
     height: 700px;
     padding: 30px;
     text-decoration: none;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);     /*vandret forskydning, flyt ned, skygge blødheden, skyggefarve sort og 10% gennemsigtighed*/
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 

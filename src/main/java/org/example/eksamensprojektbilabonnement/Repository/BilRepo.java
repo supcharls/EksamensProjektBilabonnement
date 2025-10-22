@@ -74,10 +74,14 @@ public class BilRepo
         jdbcTemplate.update(sql, id);
     }
 
+
+
     public List<Bil> findBilerDerKanLejes() {
         String sql = "select * from bil WHERE bil_status IN ('Klar', 'Skadet')";
         return jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(Bil.class));
     }
+
+
 
     public List<Bil> findBilerDerRedigeres(long BilIdSystemet) {
         String sql = "select * from bil WHERE bil_status IN ('Klar', 'Skadet') OR bil_id = ?";

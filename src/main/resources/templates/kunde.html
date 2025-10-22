@@ -7,40 +7,42 @@
 </head>
 <body>
 
-<ul class="logout" th:if="${session.loggedIn}">
-    <li><a th:href="@{/logout}">Log ud</a></li>
-</ul>
+    <ul class="logout" th:if="${session.loggedIn}">
+        <li><a th:href="@{/logout}">Log ud</a></li>
+    </ul>
 
-<div class="container">
-<h1>Opret ny kunde</h1>
+    <div class="container">
+    <h1>Opret ny kunde</h1>
 
-<form th:action="@{/kunde}" th:object="${kunde}" method="post" class="kundeform">
-    <label>Fornavn:</label>
-    <input type="text" th:field="*{fornavn}" /><br><br>
+        <form th:action="@{/kunde}" th:object="${kunde}" method="post" class="kundeform">
+            <label>Fornavn:</label>
+            <input type="text" th:field="*{fornavn}" /><br><br>
 
-    <label>Efternavn:</label>
-    <input type="text" th:field="*{efternavn}" /><br><br>
+            <label>Efternavn:</label>
+            <input type="text" th:field="*{efternavn}" /><br><br>
 
-    <label>Fødselsedag</label>
-    <input type="date" th:field="*{fDag}" /><br><br>
+            <label>Fødselsedag</label>
+            <input type="date" th:field="*{fDag}" /><br><br>
 
-    <label>Email:</label>
-    <input type="email" th:field="*{email}" /><br><br>
+            <label>Email:</label>
+            <input type="email" th:field="*{email}" /><br><br>
 
-    <label>Telefonnummer:</label>
-    <input type="text" th:field="*{tlfNr}" /><br><br>
+            <label>Telefonnummer:</label>
+            <input type="text" th:field="*{tlfNr}" /><br><br>
 
-    <label>Adresse:</label>
-    <input type="text" th:field="*{adresse}" /><br><br>
+            <label>Adresse:</label>
+            <input type="text" th:field="*{adresse}" /><br><br>
 
-    <label>Postnummer:</label>
-    <input type="text" th:field="*{postNr}" /><br><br>
+            <label>Postnummer:</label>
+            <input type="text" th:field="*{postNr}" /><br><br>
 
-    <button type="submit">Gem kunde</button>
-</form>
-<div style="text-align: center; margin-top: 20px">
-<a th:href="@{/dataForside}">Tilbage til forsiden</a>
-</div>
-</div>
+            <button type="submit">Gem kunde</button>
+        </form>
+
+            <div style="text-align: center; margin-top: 20px">
+            <a th:href="@{/dataForside}">Tilbage til forsiden</a>
+            </div>
+
+    </div>
 </body>
 </html>

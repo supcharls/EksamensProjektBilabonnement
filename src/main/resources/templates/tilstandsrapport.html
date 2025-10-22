@@ -7,28 +7,29 @@
 </head>
 <body>
 
-<ul class="logout" th:if="${session.loggedIn}">
-    <li><a th:href="@{/logout}">Log ud</a></li>
-</ul>
+    <ul class="logout" th:if="${session.loggedIn}">
+        <li><a th:href="@{/logout}">Log ud</a></li>
+    </ul>
 
-<div class="container">
-    <h1 class="title">Opret tilstandsrapport</h1>
+    <div class="container">
+        <h1 class="title">Opret tilstandsrapport</h1>
 
-<form th:action="@{/tilstandsrapport}" th:object="${rapport}" method="post">
-    <label>LejeAftaleId</label>
-    <input type="number" th:field="*{lejeaftaleId}" />
+    <form th:action="@{/tilstandsrapport}" th:object="${rapport}" method="post">
+        <label>LejeAftaleId</label>
+        <input type="number" th:field="*{lejeaftaleId}" />
 
-    <label>Vælg skader:</label>
-    <select th:field="*{fejlListe}" multiple size="5">
-        <option th:each="fejl : ${fejlValgmuligheder}"
-                th:value="${fejl.fejlId}"
-                th:text="${fejl.beskrivelse}">skade</option>
-    </select><br><br>
+        <label>Vælg skader:</label>
+        <select th:field="*{fejlListe}" multiple size="5">
+            <option th:each="fejl : ${fejlValgmuligheder}"
+                    th:value="${fejl.fejlId}"
+                    th:text="${fejl.beskrivelse}">skade</option>
+        </select><br><br>
 
-    <button type="submit">Gem rapport</button>
-    <button type="submit">Rediger rapport</button>
-</form>
-    <p><a href="/skadeForside">Tilbage</a></p>
-</div>
+        <button type="submit">Gem rapport</button>
+        <button type="submit">Rediger rapport</button>
+    </form>
+
+        <p><a href="/skadeForside">Tilbage</a></p>
+    </div>
 </body>
 </html>

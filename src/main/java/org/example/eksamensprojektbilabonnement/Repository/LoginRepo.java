@@ -16,13 +16,16 @@ public class LoginRepo {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
-    public LoginRepo(JdbcTemplate jdbcTemplate) {
+    public LoginRepo(JdbcTemplate jdbcTemplate)
+    {
         this.jdbcTemplate = jdbcTemplate;
     }
 
-    public Optional<Login> findByBrugernavn(String brugernavn) {
+    public Optional<Login> findByBrugernavn(String brugernavn)
+    {
         String sql = "select * from login where brugernavn = ?";
-        try {
+        try
+        {
             Login login = jdbcTemplate.queryForObject(sql, new Object[]{brugernavn}, new LoginMapper());
             return Optional.ofNullable(login);
         } catch (Exception e) {
@@ -30,9 +33,11 @@ public class LoginRepo {
         }
     }
 
-    private static class LoginMapper implements RowMapper<Login> {
+    private static class LoginMapper implements RowMapper<Login>
+    {
         @Override
-        public Login mapRow(ResultSet rs, int rowNum) throws SQLException {
+        public Login mapRow(ResultSet rs, int rowNum) throws SQLException
+        {
             Login login = new Login();
             login.setLoginId(rs.getLong("login_id"));
             login.setBrugernavn(rs.getString("brugernavn"));

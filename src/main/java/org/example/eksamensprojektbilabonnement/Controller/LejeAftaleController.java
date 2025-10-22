@@ -85,8 +85,6 @@ public class LejeAftaleController {
         return "lejeAftaleListe";
     }
 
-
-
     @GetMapping("/lejeAftale/slet/{id}")
     public String sletLejeaftale(@PathVariable Long id) {
         service.sletLejeAftale(id);

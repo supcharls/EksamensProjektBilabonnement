@@ -7,23 +7,23 @@
 </head>
 
 <body>
-<ul class="logout" th:if="${session.loggedIn}">
-  <li><a th:href="@{/logout}">Log ud</a></li>
-</ul>
+  <ul class="logout" th:if="${session.loggedIn}">
+    <li><a th:href="@{/logout}">Log ud</a></li>
+  </ul>
 
 
-<div class = "container">
-  <h1 class = "title">Velkommen</h1>
+  <div class = "container">
+    <h1 class = "title">Velkommen</h1>
 
 
-  <div class="function-boxes">
-    <a href = "tilstandsrapport" class = "function-box">
-      <img src="/images/skadebehandler_3.png">
-      <p>Udfør eftersyn</p>
-    </a>
+    <div class="function-boxes">
+      <a href = "tilstandsrapport" class = "function-box">
+        <img src="/images/skadebehandler_3.png">
+        <p>Udfør eftersyn</p>
+      </a>
+    </div>
+
+
   </div>
-
-
-</div>
 </body>
 </html>
